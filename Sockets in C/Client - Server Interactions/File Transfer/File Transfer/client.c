@@ -42,7 +42,7 @@ int main(int argc,char *argv[])
     int i = 1;
     while(1)
     {
-        printf("Enter a choice:\n1- get\n2- put \n3- quit\n");
+        printf("Enter a choice:\n1- put\n2- get \n3- quit\n");
         scanf("%d", &choice);
         switch(choice)
         {
