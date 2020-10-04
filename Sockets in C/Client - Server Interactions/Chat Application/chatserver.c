@@ -5,7 +5,6 @@
 #include<stdlib.h>  // standard library - needed for atoi / htons etc
 #include<sys/socket.h>  // contains structures needed for sockets - sockaddr
 #include<sys/types.h>  // definitions of data types in system calls
-#include<netinet/in.h>
 #include<string.h>
 #include<unistd.h>  // for read write and close
 #include<netinet/in.h>  // structures and constants needed for Internet Domain Addresses
