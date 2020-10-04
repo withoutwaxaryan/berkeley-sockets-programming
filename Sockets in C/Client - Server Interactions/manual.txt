@@ -1,0 +1,56 @@
+Two programs have been created using the Client- Server Paradigm : A Chat Application & a File Transfer Program.
+
+1. Chat Application
+~~~~~~~~~~~~~~~~
+
+A client can communicate with a server/ another computer using Berkeley Sockets.
+(Alternatively, you can use two terminals to simulate a client and a server on the same computer).
+
+
+Concept
+-------
+
+Server Side - > We use socket structures predefined in "sys.socket.h" and "sys/types.h" libraries. We then follow the Server protocol (Socket -> Bind -> Listen -> Accept -> Read/Write -> Close)
+
+Client Side - > We use the same socket structures and similar libraries. The Client protocol is as follows ( Socket -> Connect -> Read/Write -> Close)
+
+The Read/Write functions facilitate the communication between Server & Client.
+
+Execution
+---------
+Run the Server program using `./chatserver 10000` 
+10000 is a random port number that we selected.
+
+In another terminal, Run the Client program using `./chatclient 127.0.0.1 10000`
+127.0.0.1 is the home ip address of the laptop.
+10000 is the same port no as that of server to connect with it.
+
+The client can then communicate through one terminal and the server through another.
+
+(Take a look at the screenshots to understand the flow of communication).
+
+
+
+2. File Transfer Program
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Concept 
+-------
+
+Server Side -> A new aspect is introduced with filehandling. The Server process remains the same till accept. After that we have sendfile/recv functions to facilitate transfer of files.(image, text files etc) 
+
+Client Side -> We create a basic menu program to select (Put to Server, Get from server, and quit). Other than the sendfile/recv functions, functions involving strings are also used to compare filenames and naming the newly received files.
+
+
+Execution
+---------
+
+Run the server program using `./server 10000`
+
+Run the client program using `./client 10000' in another terminal.
+
+(Take a look at the screenshots to understand the flow of communication).
+
+Thank you!
+
+
